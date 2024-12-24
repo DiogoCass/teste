@@ -1,1 +1,893 @@
-Hello World
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta class="statusbar" name="theme-color" content="white">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gold Store - Loja de celulares e acessórios</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+       <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <!-- Google Font -->
+     <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+         
+             .navbar-brand img {
+            margin-right: 10px;
+        }
+        .card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .card:hover {
+            transform: scale(1.01);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        #cart {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        @media (max-width: 768px) {
+            #cart {
+                margin-top: 10px;
+            }
+        }
+        
+      .ccontainer{
+          width: 90vw;
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          margin-top: 6%;
+      }
+      .wwrapper {
+      border-radius: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: auto;
+        -ms-scroll-snap-type: x mandatory;
+            scroll-snap-type: x mandatory;
+      }
+      .sec {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 18vh;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        min-width: 90vw;
+        scroll-snap-align: start;
+        font-family: "Poppins", sans-serif;
+        font-size: 9vw;
+        font-weight: 600;
+        color: white;
+      }
+      
+      .sec div {
+          margin-left: 0%;
+          margin-top: 28%;
+          font-size: 8px;
+          background-color: white;
+          color: black;
+          border-radius: 5px;
+          padding: 5px;
+      }
+      
+      .wwrapper .sec:nth-child(1) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusCM5Bgslfmg5B8NcjGE2teHkMlJXuW_o2jVsa-5E7jLHF63mN53t-jls&s=10') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      .wwrapper .sec:nth-child(2) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusCM5Bgslfmg5B8NcjGE2teHkMlJXuW_o2jVsa-5E7jLHF63mN53t-jls&s=10') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+      }
+      .wwrapper .sec:nth-child(3) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusCM5Bgslfmg5B8NcjGE2teHkMlJXuW_o2jVsa-5E7jLHF63mN53t-jls&s=10') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+      }
+      .wwrapper .sec:nth-child(4) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusCM5Bgslfmg5B8NcjGE2teHkMlJXuW_o2jVsa-5E7jLHF63mN53t-jls&s=10') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+      }
+      .wwrapper .sec:nth-child(5) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusCM5Bgslfmg5B8NcjGE2teHkMlJXuW_o2jVsa-5E7jLHF63mN53t-jls&s=10') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+      }
+      
+      .ccontainerr{
+          width: 90vw;
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          margin-top: 6%;
+      }
+      .wwrapperr {
+      border-radius: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: auto;
+        -ms-scroll-snap-type: x mandatory;
+            scroll-snap-type: x mandatory;
+        
+        border-top-left-radius: 0px 20px;
+        border-bottom-left-radius: 20px 20px;
+        border-top-right-radius: 20px 20px;
+        border-bottom-right-radius: 20px 0px;
+      }
+      .secc {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 20vh;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        min-width: 30vw;
+        scroll-snap-align: start;
+        font-family: "Poppins", sans-serif;
+        font-size: 9vw;
+        font-weight: 600;
+        color: #ffffff;
+      }
+      .wwrapperr .secc:nth-child(1) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3nfn9iQGPifLqU6FpgCzSTexRO94ovfx-9w&usqp=CAU') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      .wwrapperr .secc:nth-child(2) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFZgRklrKB_F7emRRATR05rwfAj_H0V7CZg&usqp=CAU') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      .wwrapperr .secc:nth-child(3) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYRMe4DEuMFM2EDlDcQG57-JjhXdOvw_k4yw&s') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      .wwrapperr .secc:nth-child(4) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3nfn9iQGPifLqU6FpgCzSTexRO94ovfx-9w&usqp=CAU') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      .wwrapperr .secc:nth-child(5) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFZgRklrKB_F7emRRATR05rwfAj_H0V7CZg&usqp=CAU') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      .wwrapperr .secc:nth-child(6) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr3LUO71tdGqZ3Nl3d0BES_I7afp7gd0zJeA&ss19KSeeczBk7GMldJiag2VTpPmhulhxAihaag&usqp=CAc') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      .wwrapperr .secc:nth-child(7) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYRMe4DEuMFM2EDlDcQG57-JjhXdOvw_k4yw&s') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      .wwrapperr .secc:nth-child(8) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3nfn9iQGPifLqU6FpgCzSTexRO94ovfx-9w&usqp=CAU') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      .wwrapperr .secc:nth-child(9) {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr3LUO71tdGqZ3Nl3d0BES_I7afp7gd0zJeA&ss19KSeeczBk7GMldJiag2VTpPmhulhxAihaag&usqp=CAc') no-repeat center center fixed; 
+  background-size: cover; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;  
+  margin:0;
+  padding:0;
+  animation: anm 1s;
+  transition:  1s;
+      }
+      
+      #search {
+          width: 80vw;
+          background: white;
+          text-align: center;
+          padding:10px;
+          border: 4px solid gray;
+          border-radius: 10px;
+      }
+      #search::placeholder { /* Edge 12 -18 */
+      font-family: serif;
+}
+      #products {
+          width: 90vw;
+         
+          transform: translate(3%, 0%);
+          
+      }
+      .card-text {
+          font-size: 12px;
+      }
+      .card {
+          background-color: silver;
+          border-radius: 10px;
+          border: 1px solid black;
+      }
+      
+      .card img {
+          border-top-left-radius: 10px 10px;
+          border-top-right-radius: 10px 10px;
+      }
+      
+      .hd {
+    text-align: center;
+    position: relative;
+    line-height: 1em;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, 0%);
+}
+
+
+.hd:before {
+    content: "";
+    width: 25vw;
+    display: inline-block;
+    border-top: 3px solid gray;
+    position: absolute;
+    top: .5em;
+    left: 5vw;
+}
+
+
+.hd:after {
+    content: "";
+    width: 25vw;
+    display: inline-block;
+    border-top: 3px solid gray;
+    position: absolute;
+    top: .5em;
+    left: 70vw;
+}
+
+.navbar-toggler {
+    margin-right: 12px;
+}
+.nm {
+    background-color: white;
+    font-size: 0.2em;
+    padding: 2px;
+    border-radius: 5px;
+    color: black;
+    margin-top: 90%;
+    
+}
+
+.navbar {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 99;
+}
+.navspace {
+    width: 100vw;
+    height: 11vh;
+    background-color: white;
+}
+/*
+footer {
+    width: 100vw;
+    height: 10vh;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    padding-top: 4px;
+    
+}
+footer a {
+    text-decoration: none;
+}
+*/
+#loader{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: 1s;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #aaa;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.conteudodisplay {
+    display: none;
+    animation: anm .5s;
+}
+
+.card-img-top {
+    animation: anm 1s;
+}
+
+@keyframes anm {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#scrol {
+    scroll-snap-points-x:repeat(100vw);
+pointer-events:none;
+scroll-behavior:smooth;
+}
+.sec {
+    scroll-snap-stop:always;
+}
+        </style>
+    </head>
+    <body style="background: white">
+        
+        <div id ="loader">
+        <div class="lds-ellipsis">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        </div>
+    
+
+        
+        <nav style="box-shadow: 0px 2px 8px grey;" class="navbar navbar-expand-lg navbar-light bg-light" data-bs-theme="dark">
+        <div class="container">
+            
+      
+ 
+            
+            <a style="font-family:iceberg; color: black" class="navbar-brand fw-bold" href="#">
+                <!--mg src="https://www.creativefabrica.com/wp-content/uploads/2021/04/05/Photo-Image-Icon-Graphics-10388619-1-1-580x386.jpg" width="30" height="30" alt="Logo"-->
+                <h1 style="text-shadow: 2px 2px 10px silver; font-size: 1.5em; margin-top: 8px; margin-left: 70%"><b>Gold Phone</b></h1>
+            </a>
+            <button style="background-color:gray; transform: scale(1.2);" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <svg style="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="silver" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>
+              <!--span style="font-size: 10px" class="navbar-toggler-icon"></span-->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                
+                
+                <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Suas Compras
+                    </div>
+                    <ul id="cart" class="list-group list-group-flush"></ul>
+                    <div class="card-footer">
+                        Total: R$ <span id="total">0.00</span>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="conteudodisplay">
+    <div class=" navspace">NavSpace</div>
+    <div class="ccontainer">
+        <center>
+            <h4 style="font-family:iceberg; color: black;"><b>--- Loja de celulares e acessorios ---</b></h4><br>
+        </center>
+        
+      <div id="scrol" class="wwrapper">
+        <section class="sec"><div> — Ofertas — </div></section>
+        <section class="sec"><div> — Novidades — </div></section>
+        <section class="sec">IMI</section>
+        <section class="sec">IMP</section>
+        <section class="sec">IMK</section>
+      </div>
+    </div>
+    
+    <script>
+            let
+x=0,
+anim=n=>{
+    if(x>0)x=0;
+    else{x+=window.innerWidth;};
+    document.querySelector('#scrol').scrollTo(x,0);
+    setTimeout(anim,3000);
+}
+setTimeout(anim,999);
+        </script>
+        
+    <div class="ccontainerr">
+      <div class="wwrapperr">
+        <section class="secc"><div class="nm"> SONS JBL</div></section>
+        <section class="secc"><div class="nm">CELULARES</div></section>
+        <section class="secc"><div class="nm">HEADFONES</div></section>
+        <section class="secc"><div class="nm"> SONS JBL</div></section>
+        <section class="secc"><div class="nm">TELEFONE</div></section>
+        <section class="secc"><div class="nm">CONTROLE</div></section>
+        <section class="secc"><div class="nm">HEADFONE</div></section>
+        <section class="secc"><div class="nm">SONS JBL</div></section>
+        <section class="secc"><div class="nm">CONTROLES</div></section>
+      </div>
+    </div>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <center>
+                    <input type="text" id="search" class="form-control mb-4" placeholder="Olá, o que você deseja? ...">
+                </center>
+                <div id="products" class="row row-cols-2 row-cols-md-2 g-2"></div>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    
+    <!--footer>
+        <a style="color: silver;" href="#">VOLTAR AO INICIO</a>
+    </footer-->
+
+    <script>
+    onload = () => { 
+       
+        setTimeout(()=>{
+            document.getElementById("loader").style.opacity = "0";
+       
+            setTimeout(()=>{
+                document.querySelector(".conteudodisplay").style.display = "block";
+                document.getElementById("loader").style.display = "none";
+            },500)
+        
+        },1000)
+      
+    }
+        
+       
+    
+        const products = [
+            { id: 1, name: 'Capinhas', price: 1499.99, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzo-65TaSrYSf-cwKuAB07DCYW25v6iFu4hA&usqp=CAU', buy:'https://www.mercadopago.com.br/checkout/v1/payment/redirect/4dce1831-49b3-4c57-bc04-d087f31d3b76/payment-option-form-v2/?source=link&preference-id=1839748577-ae77cce6-9228-4c8e-ac7d-1af913fde4fe&router-request-id=82e7b9e0-645a-49f9-a667-993618b250f3&journey-id=61a1e94bba68c1155acda17872eb15e6&p=9cf9e38c129a448edbb823484b2ce0bf'},
+            { id: 2, name: 'Drone', price: 1499.99, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCUv9jAS4Nst2x5suY0SEQBqq7Yo5eByKuUiDu-mYftM9CODWSLpXDIc6e&s=10' },
+            { id: 3, name: 'Controle', price: 1299.99, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr3LUO71tdGqZ3Nl3d0BES_I7afp7gd0zJeA&ss19KSeeczBk7GMldJiag2VTpPmhulhxAihaag&usqp=CAc' },
+            { id: 4, name: 'Fone de Ouvido Bluetooth', price: 199.99, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYRMe4DEuMFM2EDlDcQG57-JjhXdOvw_k4yw&s' },
+            { id: 5, name: 'Camera', price: 1299.99, image: 'https://www.dropbox.com/scl/fi/6bqyhu5mx05wj286barhf/Snapinsta.app_465693050_1593928878165180_4220566947258555520_n_1080.jpg?rlkey=9a601ekmgeexkaxyfb0hj5niy&st=zwobtob3&dl=1' },
+            { id: 6, name: 'Videogame', price: 3099.99, image: 'https://www.dropbox.com/scl/fi/6bqyhu5mx05wj286barhf/Snapinsta.app_465693050_1593928878165180_4220566947258555520_n_1080.jpg?rlkey=9a601ekmgeexkaxyfb0hj5niy&st=zwobtob3&dl=1' },
+           
+           ];
+
+        const cart = [];
+
+        function renderProducts(productsToRender) {
+            const productsContainer = document.getElementById('products');
+            productsContainer.innerHTML = '';
+            productsToRender.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'col';
+                productElement.innerHTML = `
+                    <div class="card h-100">
+                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                        <div id="cbody" class="card-body">
+                            <h5 style="font-family:iceberg;" class="card-title">${product.name}</h5>
+                            <hr>
+                            <center>
+                                <p style="padding-bottom: 0px !important;" class="card-text">R$ ${product.price.toFixed(2)}</p>
+                            </center>
+                            <hr>
+                            <button class="btn btn-dark" onclick="addToCart(${product.id})">🛒</button>
+                            <button class="btn btn-dark" onclick="window.location.href='${product.buy}'">🛍️ GET </button>
+                        </div>
+                    </div>
+                `;
+                productsContainer.appendChild(productElement);
+            });
+        }
+
+        function renderCart() {
+            const cartContainer = document.getElementById('cart');
+            const totalElement = document.getElementById('total');
+            cartContainer.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                const itemElement = document.createElement('li');
+                itemElement.className = 'list-group-item d-flex justify-content-between align-items-center';
+                itemElement.innerHTML = `
+                    ${item.name} - R$ ${item.price.toFixed(2)}
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})">Remover</button>
+                `;
+                cartContainer.appendChild(itemElement);
+                total += item.price;
+            });
+            totalElement.textContent = total.toFixed(2);
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                cart.push({ ...product });
+                renderCart();
+            }
+        }
+
+        function removeFromCart(productId) {
+            const index = cart.findIndex(item => item.id === productId);
+            if (index !== -1) {
+                cart.splice(index, 1);
+                renderCart();
+            }
+        }
+
+        document.getElementById('search').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredProducts = products.filter(product => 
+                product.name.toLowerCase().includes(searchTerm)
+            );
+            renderProducts(filteredProducts);
+        });
+
+        renderProducts(products);
+        renderCart();
+        
+        
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+   
+
+    <footer class="ft">
+      <div class=" rowt primaryt">
+        <div class="columnt aboutt">
+          <h3>Gold Phone</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex.
+          </p>
+        </div>
+        
+        <div class="columnt subscribet">
+          <h3>Newsletter</h3>
+          <div>
+            <input class="inputt" type="email" placeholder="seumelhoremail@gmail.com" />
+            <button class="buttont">Inscrever-me</button>
+          </div>
+          <div class="socialt">
+            <i class="fa-brands fa-facebook-square"></i>
+            <i class="fa-brands fa-instagram-square"></i>
+            <i class="fa-brands fa-whatsapp-square"></i>
+          </div>
+        </div>
+      </div>
+      <div class="rowt copyrightt">
+        <a href="https://youtu.be/XJ2Vc7Mx7VI" target="_blank"
+          >Visualizar no mapa?</a
+        >
+        <p>Copyright &copy; 2024 Criado por Diogo C.Cass</p>
+      </div>
+    </footer>
+    <style>
+        footer {
+        background-color: silver;
+        color: black;
+        font-size: 16px;
+        margin-top: 10%;
+      }
+      footer * {
+        font-family: "Poppins", sans-serif;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        border: none;
+        outline: none;
+      }
+      .rowt {
+        padding: 2em 0.5em;
+      }
+      /* First Row */
+      .rowt.primaryt {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 2fr 1fr 2fr;
+        grid-template-columns: 2fr 1fr 2fr;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+      }
+      .columnt {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding: 0 2em;
+        min-height: 15em;
+      }
+      h3 {
+        width: 100%;
+        text-align: left;
+        color: black;
+        font-size: 1.6em;
+        white-space: nowrap;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        
+      }
+      ult {
+        list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+      lit:not(:first-child) {
+        margin-top: 0.8em;
+      }
+      ult lit a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      ult lit a:hover {
+        color: #2a8ded;
+      }
+      .aboutt p {
+        text-align: justify;
+        line-height: 2;
+        margin: 0;
+      }
+      .inputt,
+      .buttont {
+        font-size: 1em;
+        padding: 1em;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+      buttont {
+        background-color: #2a8ded;
+        color: #ffffff;
+      }
+      div.socialt {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        font-size: 2.4em;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin-top: 0.5em;
+      }
+      .socialt i:hover {
+        color: gray;
+      }
+      /* Second Row */
+      .rowt.secondaryt {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        text-align: center;
+      }
+      .rowt.secondaryt i {
+        font-size: 1.8em;
+        color: #2a8ded;
+      }
+      .rowt.secondaryt div {
+        padding: 1em 0;
+        width: 100%;
+      }
+      .rowt.secondaryt div:hover {
+        background-color: #25262e;
+      }
+      /*Third Row */
+      .copyrightt {
+        padding: 1em 1em;
+        background-color: #25262e;
+      }
+      .copyrightt a {
+        position: relative;
+        display: block;
+        width: 90%;
+        background-color: black;
+        margin: auto;
+        text-align: center;
+        color: #ffffff;
+        padding: 1em 0;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.2em;
+        margin-bottom: 10%;
+      }
+      .copyrightt p {
+        font-size: 0.9em;
+        text-align: center;
+        color: white;
+      }
+      @media screen and (max-width: 850px) {
+        footer {
+          font-size: 14px;
+        }
+        .rowt {
+        padding: 2em 0em;
+      }
+        .rowt.primaryt {
+          -ms-grid-columns: 1fr;
+          grid-template-columns: 1fr;
+        }
+        .rowt.secondaryt {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+        }
+      }
+    </style>
+    
+    </div>
+    </body>
+</html>
