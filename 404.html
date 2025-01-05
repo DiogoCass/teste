@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta class="statusbar" name="theme-color" content="white">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="author" content="Diogo Coutinho Cassemiro" />
+<title>Diogo C.Cass | WebStore</title>
+<meta name="theme-color" content="#75b529">
+<meta property=og:image content="https://www.dropbox.com/scl/fi/0ai1zke8ge6f1fxrvbcjd/FB_IMG_1658102300081.jpg?rlkey=j937fgpqxxt4fhcuokhwk1ds7&st=144p054r&dl=1"/>
+<link rel="shortcut icon" href="https://www.dropbox.com/scl/fi/0ai1zke8ge6f1fxrvbcjd/FB_IMG_1658102300081.jpg?rlkey=j937fgpqxxt4fhcuokhwk1ds7&st=144p054r&dl=1" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://www.dropbox.com/scl/fi/0ai1zke8ge6f1fxrvbcjd/FB_IMG_1658102300081.jpg?rlkey=j937fgpqxxt4fhcuokhwk1ds7&st=144p054r&dl=1">
+<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/themes/default/default.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" src="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body {
+font-family: 'Muli', sans-serif;
+line-height:1.5;
+font-size:1rem;
+}
+a,a:hover {
+text-decoration:none;
+}
+img {
+ max-width:100%;
+}
+button {
+ display:inline-block;
+ outline:none;
+ border:none;
+ transition:0.3s ease;
+ padding:10px 25px;
+ border-radius:2px;
+ color:#fff;
+}
+section {
+ max-width:460px;
+ margin:auto;
+}
+nav {
+ width:100%;
+ height:50px;
+ box-shadow:0 4px 5px rgba(0,0,0,0.4);
+ display:flex;
+ justify-content: space-between;
+ align-items: center;
+ padding:0 20px;
+}
+nav > a {
+ font-weight:bold;
+ font-size:24px;
+ color: orange; #ff2e70;
+}
+.dgcss-bar {
+ display:flex;
+ flex-direction: column;
+ cursor:pointer;
+ padding:5px;
+}
+.dgcss-bar span {
+ display:inline-block;
+ width:22px;
+ height:2px;
+ background:#333;
+ margin:2px;
+}
+header {
+ height:240px;
+ width:100%;
+ display:flex;
+ align-items: center;
+ padding:20px;
+ background: linear-gradient(45deg , rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt0gKBaoxgkjWfMPrWtspg_iqVjGOY3qksiA&usqp=CAU");
+ background-size:cover;
+ background-position: center;
+ color:#fff;
+}
+header button {
+ background: orange; #ff2e70;
+ margin-top:15px;
+}
+.dgcss-title {
+ margin:6px 0px -14px 0px !important;
+ text-align:center;
+ color: orange; #ff2e70;
+ font-size: 1.2rem;
+}
+.dgcss-container {
+  padding:20px;
+}
+.dgcss-product {
+ position:relative;
+ margin-bottom:20px;
+ border:1px solid #c0c0c0;
+ padding:10px 20px;
+ overflow:hidden;
+}
+.dgcss-product-details {
+ margin-top:10px;
+}
+.dgcss-views {
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ display:flex;
+ align-items: center;
+ justify-content: center;
+ background:rgba(235,90,10,0.2);
+ transition:0.3s ease;
+ opacity:0;
+}
+.dgcss-views button {
+ background:#fff;
+ color: orange; #ff42ad;
+ padding:10px 35px;
+ border-radius:2px;
+ margin:0 5px;
+}
+.dgcss-views .dgcss-buy-now {
+ background: orange; #333;
+ color:#fff;
+}
+.dgcss-product:hover > .dgcss-views{
+ opacity:1;
+}
+.dgcss-discount{
+ position: absolute;
+ top:0;
+ left:0;
+ padding:5px;
+ color:black;
+ background: whitesmoke; #ff2e70;
+ font-size:14px;
+ font-weight:bold;
+ width:80px;
+ text-align: center;
+}
+.dgcss-product del {
+ color: #f33448;
+ display:inline-block;
+ margin-left:10px;
+}
+.dgcss-copyright {
+ text-align:center;
+ padding:5px 0;
+ border-top:1px solid #555;
+ margin:0 20px;
+}
+.dgcss-copyright2 {
+ text-align:center;
+ padding:20px 0;
+ border-top:1px solid #555;
+ margin:0 20px;
+}
+.dgcss-sec2 .dgcss-flex{
+ min-height:100vh;
+ display:flex;
+ flex-direction: column;
+ justify-content:space-between
+;
+}
+.dgcss-sec2 h2 {
+ color: #ff2e70;
+}
+.dgcss-btn-group {
+ display:flex;
+ padding:5px 15px;
+}
+.dgcss-btn-group button {
+ flex:1;
+ margin:5px;
+ font-size:16px;
+}
+.dgcss-cancel {
+ background:#333;
+}
+.dgcss-buy {
+ background: orange; #ff2e70;
+}
+.dgcss-close, .dgcss-close-sec6 {
+ background:transparent;
+ color: #000;
+ font-size:40px;
+ position:absolute;
+ top:0px;
+ left:0px;
+ cursor:pointer;
+}
+.dgcss-close-sec6 {
+ left:auto;
+ right:0;
+}
+.dgcss-card {
+ width:100%;
+ padding:1rem;
+ background:#fff;
+ border:1px solid #c0c0c0;
+ border-radius:5px;
+ margin:20px 0;
+}
+.dgcss-card p {
+ margin-bottom:5px;
+}
+.dgcss-card img {
+ width:100px;
+}
+.dgcss-flex {
+ display:flex;
+}
+.dgcss-sec5 .dgcss-flex{
+ height:110vh;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ padding:20px;
+  
+}
+.dgcss-thanks h1 {
+ color: orange; #ff2e70;
+ opacity:0.5;
+ font-size:50px;
+}
+.dgcss-home {
+ background: orange; #ff2e70;
+ margin-top:10px;
+}
+.dgcss-sec6 {
+ background:#f5f5f5;
+ height: auto;
+}
+.dgcss-sec-title {
+ text-align: center;
+ padding:20px 0 10px;
+}
+.dgcss-sec-title h2 {
+color: orange; #ff2e70;
+}
+.dgcss-cart-list {
+ padding:25px 0;
+}
+.dgcss-cart {
+ max-width:360px;
+ margin:0 auto 20px;
+ border-radius:4px;
+ background:#fff;
+ box-shadow:0px 2px 5px rgba(0,0,0,0.2);
+ text-align: center;
+ padding:20px 0;
+ transition:300ms ease;
+}
+.dgcss-cart:hover {
+ box-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+.dgcss-cart-img {
+ width:150px;
+ height:150px;
+ border-radius:50%;
+ overflow:hidden;
+ margin:15px auto;
+}
+.dgcss-cart h1 {
+ color:orange; #555;
+ margin-bottom:20px;
+}
+.dgcss-cart a {
+ display:inline-block;
+ padding:8px 25px;
+ border-radius:2px;
+ color:#111;
+ background: whitesmoke; #ff2e70;
+ margin-bottom:20px;
+}
+.dgcss-hide {
+ display:none;
+}
+#loading{
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    position: fixed;
+    z-index: 999;
+    transition: .3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#waw{
+    float: right;
+    margin-top: -8%;
+    margin-right: 2%;
+    color: white;
+    padding: 2px;
+}
+.qr-border {
+    width: 60%;
+    height: auto;
+    border: 2px solid orange;
+    padding: 5px 7px 2px 5px;
+    border-radius: 8px;
+}
+/*
+.dgcss-product-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dgcss-product {
+    width: 160px;
+    margin: 2px;
+}
+.dgcss-views {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+*/
+
+.aa {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.aa.aaa {
+    
+    width: auto;
+    height: auto;
+    display: block;
+    
+}
+.bb {
+    width: 160px;
+    margin: 4px;
+}
+.bb.bbb {
+    
+    width: auto;
+    margin: 20px 0;
+    
+}
+.cc {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.cc.ccc {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.dgcss-title.marge {
+ margin:10px 0px -30px 0px !important;
+}
+</style>
+</head>
+
+
+<body>
+<div id="loading">
+    CARREGANDO MATERIAIS. . .
+  <center><small>
+    Aguarde, isso pode levar alguns segundos.
+  </small></center>
+</div>
+<!--
+ nome do app : Meu E-Commerce 2.0,
+ criado por : Diogo Coutinho Cassemiro,
+ data : 03-janeiro-2025,
+-->
+<section class="dgcss-sec1">
+<nav>
+ <a href="#" >🧑‍💻 DG-Store</a>
+ <div class="dgcss-bar" >
+  <span></span>
+  <span></span>
+  <span></span>
+ </div>
+</nav>
+<header>
+ <div>
+  <h3>🪐 Obtenha Codigos Personalisados</h3>
+  <button class="dgcss-signin" >🛍️ No Whatsapp 📨</button>
+  </div>
+</header>
+      <b><small id="waw">Novos projetos mais tarde 🙂</small></b>
+<h2 class="dgcss-title" >——— Menu De Projetos ———</h2>
+<div class="aa dgcss-product-list dgcss-container" >
+</div>
+<div class="dgcss-copyright" >
+  <small>&copy; Criado de ❤️ por Dg C.Cass</small>
+  
+</div>
+</section>
+<section class="dgcss-sec2 dgcss-hide">
+<div class="dgcss-flex" >
+ <div>
+ <span class="dgcss-discount dgcss-dis"></span>
+ <center>
+     <img class="dgcss-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGgU2u5ikvkiPf1hg3Ttv0e5ZGB9MliseIWw&usqp=CAU" alt="" >
+ </center>
+  <div class="dgcss-container" >
+   <h2 class="dgcss-pro-name" >Titulo</h2>
+   <h1 class="dgcss-price" >Valor</h1>
+   <p class="dgcss-description" >Descrição</p>
+ </div>
+ </div>
+ <div class="dgcss-btn-group" >
+  <button class="dgcss-cancel" >Retornar</button>
+  <button class="dgcss-buy" >Comprar</button>
+ </div>
+</div>
+</section>
+<section class="dgcss-sec5 dgcss-hide" >
+ <div class="dgcss-flex" >
+  <div class="dgcss-thanks" >
+  <center>
+      <div class="qr-border">
+        <img src="https://www.dropbox.com/scl/fi/wcghgsstx7j41rel4cj9c/Screenshot_20250105-171116-2.png?rlkey=qyx15l77vgfeak1y1dc6nma8r&st=2d7vyrke&dl=1">
+    </div>
+  </center><br>
+      <p style="font-size: 6px">00020126970014BR.GOV.BCB.PIX0136a8a09d94-2bcd-4730-82d1-497669a7de950235Aquisição de um produto da loja DGS5204000053039865406100.005802BR5924Diogo Coutinho Cassemiro6009SAO PAULO62140510y1tG29d5Bm63043E75</p>
+    <h1>Boa Escolha :)</h1> 
+    <p>Após o pagamento desse QRCODE, envie-nos o comprovante no whatsapp para concluirmos a sua entrega.</p><br>
+    <button class="dgcss-home" >Abrir no Whats!!</button>
+    <center><small class="retorna">--- 🪐 voltar 🪐 ---</small></center>
+  </div>
+ </div>
+</section>
+<section class="dgcss-sec6 dgcss-container dgcss-hide" >
+  <button class="dgcss-close-sec6" >
+    &times;
+  </button>
+  <div class="dgcss-sec-title" >
+     <h2>Sobre mim</h2>
+     <small>( Com 6 anos de experiencia, você pode confiar)</small>
+  </div>
+  <div class="dgcss-cart-list">
+  </div>
+  <div class="dgcss-copyright2" >
+    <small>Olokinho meu!</small>
+  </div>
+</section>
+<!-- script -->
+<!-- Diogo Coutinho Cassemiro -->
+<script>
+const products = [
+ {
+  id:2,
+  name:"Card De Apresentar Produto",
+  price: 100,
+  discount:5,
+  video:"https://www.dropbox.com/scl/fi/fd0db6cgd0slb1lferz8e/lv_7277767074615774465_20250105131012.mp4?rlkey=1zxiisp4cc5hgycg6nx2q20s3&st=8f5pu7vh&dl=1",
+  image:"https://www.dropbox.com/scl/fi/hqnp66s666ihyspobzrmy/IMG-20241206-WA0008.jpg?rlkey=xkjrioofip72a6js3io0lti37&st=6xiq1hc8&dl=1",
+  description: "Este card é excelente para colocar na biografia do seu Instagram, para você que vende um produto único, que precisa de destaque, ele oferece uma animação interativa e um design bem criativo"
+ },
+ {
+  id:3,
+  name:"Layout Dark Design",
+  price: 100,
+  discount:9,
+  video:"https://www.dropbox.com/scl/fi/y3js6k9nr46a8rh98fp5d/lv_7277767074615774465_20250105134357.mp4?rlkey=r4seaf2ajaybfujru92v8ruqw&st=bxkbcr9s&dl=1",
+  image:"https://www.dropbox.com/scl/fi/u1y6epkwrimfcn38ogok7/Screenshot_20250104-172904-2.png?rlkey=pbu3c37f5t4yis9vytylo8rwg&st=y6pf980u&dl=1",
+  description:"Este Design, foi inspirado no visual da Xiomi, com detalhes obtidos diretamente da marca para inventar uma projeção explendit. O seu código fonte está uma obra impecável, como uma verdadeira obra de arte para quem entende de programação. No BackEnd, temos uma API consumindo dados diretamente do SITE DA NASA :), obtendo fotos, títulos e textos..."
+ },
+ {
+  id:4,
+  name:"Biografia Jornalística",
+  price: 100,
+  discount:30,
+  video:"https://www.dropbox.com/scl/fi/0bcd7nb63y2vh2ildh3in/lv_7277767074615774465_20250105124850.mp4?rlkey=44vz9cpxum0hp42ojgkpst1pv&st=g9dhuic9&dl=1",
+  image:"https://www.dropbox.com/scl/fi/c8wtfneuiat2r7lck1nkq/Screenshot_20250104-193048-2.png?rlkey=3db75m7od6ci1cgclktk40kfk&st=r0l69jeg&dl=1",
+  description:"Essa biografia, é uma página excelente para quem deseja ter um blog, projetada para apresentar vídeos, fotos, áudios, músicas e qualquer outra mídia. Além disso, ela é rica em detalhes com inspiração na 'leitura de um ARTIGO formal' como um jornal e sua elegância."
+ },
+ {
+  id:5,
+  name:"Portfólio Simples",
+  price: 100,
+  discount:20,
+  video:"https://www.dropbox.com/scl/fi/9xcvngz6jpxf7e0n7oju9/lv_7277767074615774465_20250105145025.mp4?rlkey=40emxv1zmgsi7omukl32byic9&st=3treos3d&dl=1",
+  image:"https://www.dropbox.com/scl/fi/49cwufcni62wpnxjpb21o/Screenshot_20250104-194015-2.png?rlkey=2x69g1phiycymlankv4tc2vnk&st=pdwf2af5&dl=1",
+  description:"Um portfólio formal, minimalista e com elegancia no seu design, contendo uma foto de perfil, barras circulares para demonstrar suas skills, e uma direção ao seu whatsapp ou seu email e redes sociais."
+ },
+ {
+  id:6,
+  name:"Portfólio Completo",
+  price: 100,
+  discount:40,
+  video:"https://www.dropbox.com/scl/fi/nxrgxieh7vjpcv2e2qkyw/lv_7277767074615774465_20250105151138.mp4?rlkey=z4z9kxm3pos20fp4uum9jcuz9&st=ic1x8tmr&dl=1",
+  image:"https://www.dropbox.com/scl/fi/ry029o8o2qct9xtq3xx43/Screenshot_20250104-180025-3.png?rlkey=87dankom30bk721r18uelavl3&st=e11tekhg&dl=1",
+  description:"Este portfólio tem uma linda apresentação visual, inspirado na cor do céu noturno, ele contém elementos bem organizados, com suporte para mídias e direções ao seus projetos. Uma excelente escolha para se tornar o seu currículo online." 
+ },
+ {
+  id:7,
+  name:"Ecomerce Completo",
+  price: 100,
+  discount:50,
+  video:"https://www.dropbox.com/scl/fi/ex1brjjxjc9tchbsnpajf/lv_7277767074615774465_20250105110629.mp4?rlkey=oyqi9lszxr01ssvo70nkn7hzz&st=1cxum5bz&dl=1",
+  image:"https://www.dropbox.com/scl/fi/4gko8x0ds99a4y35abamj/Screenshot_20250104-183642-2.png?rlkey=2dfc75i19j98607lty16p0lcy&st=in92ju3f&dl=1",
+  description: "Este Ecommerce foi criado em Bootstrap, excelente para apresentar uma grande quantidade de produtos, com classificações e categorias, com pesquisas e vários outros recursos integrado. Com direções em suas redes sociais, transições em sua conta bancária e formulário para captação de dados direcionadas ao seu email ou WhatsApp."
+ }
+]
+const coders = [
+ {
+  name:"Sou Diogo Coutinho Cassemiro",
+  avtar:"https://www.dropbox.com/scl/fi/0ai1zke8ge6f1fxrvbcjd/FB_IMG_1658102300081.jpg?rlkey=j937fgpqxxt4fhcuokhwk1ds7&st=144p054r&dl=1",
+  url:"https://www.instagram.com/diogocoutcass?igsh=MWQzOTVzZjJjd20yaQ==", 
+ },
+]
+let product = {};
+
+$(window).on('load',function(){
+ setData();
+})
+$(document).ready(function(){
+ $(".dgcss-view").click(function(e){
+  const id = e.target.getAttribute("data-id");
+  product = products.find(p => p.id == id);
+  $(".dgcss-sec1").hide();
+  $(".dgcss-sec2").fadeIn();
+  $(".dgcss-img").attr("src", product.image);
+  $(".dgcss-dis").text(product.discount +"% off")
+  $(".dgcss-pro-name").text(product.name);
+  $(".dgcss-price").text("Rs. "+product.price);
+  $(".dgcss-description").text(product.description)
+ });
+ $(".dgcss-buy-now").click(function(e){
+  const id = e.target.getAttribute("data-id");
+  product = products.find(p => p.id == id);
+  $(".dgcss-sec1").hide();
+  $(".dgcss-sec5").fadeIn();
+ });
+ $(".retorna").click(function(e){
+  const id = e.target.getAttribute("data-id");
+  product = products.find(p => p.id == id);
+  $(".dgcss-sec1").fadeIn();
+  $(".dgcss-sec5").hide();
+ });
+ $(".dgcss-signin").click(function(){
+  setTimeout(()=>{
+           const zp = "https://api.whatsapp.com/send?phone=5551996748252&text=Olá%20Diogo%20👍";
+            window.open(zp, '_blank');
+       },500)
+ });
+ $(".dgcss-cancel").click(function(){
+  $(".dgcss-sec2").hide();
+  $(".dgcss-sec1").fadeIn();
+ });
+ $(".dgcss-buy").click(function(){
+  $(".dgcss-sec2").hide();
+  $(".dgcss-sec5").fadeIn();
+ });
+ $(".dgcss-close").click(function(){
+  $(".dgcss-sec5").hide();
+  $(".dgcss-sec1").fadeIn();
+ });
+ $(".dgcss-close-sec6").click(function(){
+   $(".dgcss-sec6").hide();
+   $(".dgcss-sec1").fadeIn();
+ });
+ $(".dgcss-bar").click(function(){
+  $(".dgcss-sec1").hide();
+  $(".dgcss-sec6").fadeIn();
+ });
+ 
+ $(".dgcss-home").click(function(){
+   setTimeout(()=>{
+       $(".dgcss-sec5").hide();
+       $(".dgcss-sec1").fadeIn();
+       product = {};
+       setTimeout(()=>{
+           const zp = "https://api.whatsapp.com/send?phone=5551996748252&text=Olá%20Diogo,%20eu%20vim%20atraves%20da%20sua%20loja...";
+            window.open(zp, '_blank');
+       },500)
+   },200)
+ });
+})
+
+let one = 0;
+function count() {
+    one++;
+    if (one == 7) {
+        loading.style = "opacity: 0";
+        loading.style = "display: none";
+    }
+}
+
+function addProduct(data) {
+ const div = `
+  <div class="bb dgcss-product">
+  <video oncanplaythrough="count()" preload="none" poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGgU2u5ikvkiPf1hg3Ttv0e5ZGB9MliseIWw&usqp=CAU" style="width:100%" no-controls autoplay loop muted playsinline>
+      <source src="${data.video}" type="video/mp4">
+  </video>
+  <div class="dgcss-product-details" >
+  <p>${data.name}</p>
+  <h4>Rs. ${data.price} <del>${Math.floor(data.price * 100 / (100 - data.discount))}</del></h4>
+  <span class="dgcss-discount">${data.discount}% off</span>
+  </div>
+   <div class="cc dgcss-views" >
+    <button class="dgcss-view" data-id="${data.id}">Detalhes</button>
+    <button class="dgcss-buy-now" data-id="${data.id}">Comprar</button>
+   </div>
+  </div>
+ `;
+ $(".dgcss-product-list").append(div);
+}
+
+function setProduct(){
+ products.forEach(product => addProduct(product))
+}
+setProduct()
+
+function addCoder(coder) {
+ let div = ` <div class="dgcss-cart">
+    <div class="dgcss-cart-img">
+    <img src="${coder.avtar}" alt="">
+   </div>
+    <h1>${coder.name}</h1>
+    <a href="${coder.url}" target="_blank" >Veja mais</a>
+  </div>
+  <div style="padding: 10px"class="dgcss-cart">
+      <p style="margin: 12px 0 0 0">~~~~ 🪐 Meus Certificados 🪐 ~~~~</p><br>
+      <img src="https://www.dropbox.com/scl/fi/ltvb9hmn3t3em5tc70t9j/IMG-20240917-WA0022-1.jpg?rlkey=cylx324o4axqib0th7cfuyxvv&st=372avqwm&dl=1">
+      <img src="https://www.dropbox.com/scl/fi/myleedpmfb3wtnb5ys63v/IMG-20240917-WA0020-1.jpg?rlkey=t3c9zxyvfe5tv1veb9vgaq10b&st=frbtr50c&dl=1">
+      <img src="https://www.dropbox.com/scl/fi/j0m0uos72eso7u658upd2/IMG-20240913-WA0008-1.jpg?rlkey=e701kcy1xyil7vd0x5ds7v6et&st=gdw589lw&dl=1">
+  </div>
+  <div class="dgcss-cart">
+      <div class="dgcss-sec-title" >
+          <h1>Configurações</h1>
+     <small>~~~~ 🪐 ~~~~</small>
+  </div>
+  <a onclick="ajs()">Ajustar vitrini</a>
+  </div>
+   `;
+ 
+ $(".dgcss-cart-list").append(div);
+}
+
+function setData(){
+    coders.forEach(coder => addCoder(coder))
+}
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  onOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+function ajs() {
+  $(".aa").toggleClass("aaa");
+  $(".bb").toggleClass("bbb");
+  $(".cc").toggleClass("ccc");
+  $(".dgcss-title").toggleClass("marge");
+  
+  setTimeout(()=>{
+   $(".dgcss-sec6").hide();
+   $(".dgcss-sec1").fadeIn();
+   document.documentElement.scrollTop = 0;
+   //voce alternou o modo de visualização.
+   Toast.fire({
+  icon: 'success',
+  title: 'Modo de visualização alternado'
+})
+  }, 300)
+}
+</script>
+</body>
+  </html>
